@@ -9,6 +9,13 @@ const signin = require('./Controllers/signin');
 const profile = require('./Controllers/profile');
 const image = require('./Controllers/image');
 
+require('dotenv').config();
+
+
+let port = process.env.PORT;
+let host = process.env.HOST;
+let apiKey = process.env.API_KEY;
+
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0
 
 const db = knex({
